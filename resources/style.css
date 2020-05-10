@@ -1,0 +1,452 @@
+
+
+@font-face{
+    font-family: 'mont';
+    src: url(../Montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face{
+    font-family: 'montlight';
+    src: url(../Montserrat/Montserrat-Light.ttf);
+}
+
+@font-face{
+    font-family: 'poi';
+    src: url(../Poiret_One/MajorMonoDisplay-Regular.ttf);
+}
+
+
+
+/* 
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-family: 'Poiret One', cursive;
+
+ */
+
+
+*{
+    font-family: 'mont', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 900;
+
+}
+
+body,html{
+  
+    scroll-behavior: smooth;
+
+}
+
+
+.seperator-wrapper {
+    width: 100%;
+    
+  }
+  .seperator-wrapper .seperator {
+    width: 100%;
+
+    offset: 100px;
+    height: 5px;
+    animation: rotate 3s infinite linear;
+    -webkit-animation: rotate 3s infinite linear;
+ 
+  }
+  
+ 
+  @keyframes rotate {
+    from {
+      background-position: -3000px;
+    }
+    to {
+      background-position: 0px;
+    }
+  }
+
+  .gradient {
+  
+    background: -moz-linear-gradient(left, #30ff90 0%, #ed2ded 25%, #c99826 50%, #30ffe6 75%, #30ff90 100%);
+  
+    background: linear-gradient(to right, #30ff90 0%, #ed2ded 25%, #c99826 50%, #30ffe6 75%, #30ff90 100%);
+  
+  }
+
+
+
+.top-nav{
+    color: white ;
+    font-size: 10px;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #222761;
+}
+
+
+.login,cite{
+margin: 0 150px;
+
+}
+
+h5{
+    font-weight: 400;
+}
+.top-nav a{
+    color: white;
+    border-radius: 2px;
+    padding: 3px 10px;
+    margin: 0 5px;
+  
+}
+
+
+.top-nav a:first-child{
+   
+      background-color: rgb(255, 123, 0);
+   
+}
+.top-nav a:last-child{
+    background-color: transparent;
+ border: 1px solid white;
+}
+
+
+
+a{
+text-decoration: none;
+
+}
+
+
+.bottom-nav{
+    height: 10vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(25, 38, 83);
+}
+
+.bottom-nav h1{
+
+   text-transform: uppercase;
+padding: 5px 0;
+font-family: 'poi';
+
+font-size: 25px;
+
+}
+
+.bottom-nav h1 hr{ 
+
+ margin-top: 10px;
+margin-left: auto;
+ color: chocolate;
+ height: 4px;
+border-radius: 100px;
+ background-color:chocolate;
+ 
+ 
+ }
+
+
+
+.inside-nav{
+    list-style: none;
+ display: inline;
+}
+
+.inside-nav li {
+   
+    font-size: 12px;
+  margin: 0 10px;
+    display: inline-block;
+}
+
+.inside-nav li a{
+   
+    font-size: 12px;
+  margin: 0 10px;
+    display: inline-block;
+    color: rgb(25, 38, 83);
+}
+
+.inside-nav li .active{
+   
+    font-size: 12px;
+  margin: 0 10px;
+    display: inline-block;
+    color: chocolate;
+  padding-bottom: 5px;
+  
+}
+
+
+
+
+.last-of-header{
+    background:linear-gradient(rgba(13, 40, 116, 0.781),rgba(35, 26, 116, 0.74)),url(../resources/1.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.last-of-header h1{
+    display: block;
+    text-transform:none;
+    font-size: 100px;
+    color: white;
+    margin: 0 30px 30px 30px;
+}
+
+.text-box a{
+    margin: 10px 40px;
+    color: #222761;
+    background-color: white;
+    transition: 1s;
+}
+
+
+
+
+.text-box a:last-child{
+    margin: 10px 0px;
+    color: white;
+    background-color: transparent;
+    border: 0.01px solid white;
+}
+
+.text-box a:hover{
+  
+ 
+  box-shadow: 1px 1px 75px white;
+    transform: translateY(-15px);
+}
+
+
+@keyframes Border{
+    from{
+        border: 5px solid transparent;
+    }
+
+    to{
+        border: 5px solid #ffffff;
+    }
+}
+
+.text-box a:last-child:hover{
+  
+ 
+  animation-name: Border;
+  animation-duration: 5s;
+      transform: translateY(-15px);
+  }
+
+
+
+
+.btn{
+    padding:10px 40px;
+    border-radius: 4px;
+}
+
+
+
+
+
+section.about{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    color: rgb(31, 29, 160);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+background: linear-gradient(57deg, #f27121, #8a2387, #240b36);
+background-size: 600% 600%;
+
+-webkit-animation: AnimationName 4s ease infinite;
+-moz-animation: AnimationName 4s ease infinite;
+animation: AnimationName 4s ease infinite;
+
+}
+
+
+
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+
+@keyframes Triangle{
+
+from{
+    background:rgb(19, 161, 255);    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+transform: rotateZ(-360deg);
+}
+
+
+to{
+    background:rgb(9, 240, 163);    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+transform: rotateZ(360deg);
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.triangle{
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background:rgb(153, 0, 255); 
+    animation-name: Triangle;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+
+section.archive_results{
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(32, 51, 136);
+    color: rgb(31, 29, 160);
+    color: white;
+
+}
+
+.archive_title{
+   width: 100%;
+   height: 50%;
+    font-size: 30px;
+    display: flex;
+   justify-content: center;
+   font-family: 'montlight';
+align-items: center;
+}
+
+.archivements{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-wrap: wrap;
+}
+
+
+
+.archive{
+    width: 200px;
+    height: 150PX;
+
+background-color: rgb(47, 67, 153) ;
+border-radius: 3px;
+transition: 1s all;
+margin-bottom: 10px;
+
+}
+
+
+.archive:hover{
+   
+   
+
+background-color: rgb(76, 94, 173) ;
+
+transform: rotateZ(360deg);
+}
+
+
+
+h5{
+
+    display: block;
+    margin: 0 auto;
+    margin-top: 25%;
+    font-size: 20px;
+  text-align: center;
+  color: rgb(255, 123, 0);
+}
+
+h6{
+text-transform: none;
+    display: block;
+    font-size: 14px;
+     text-align: center;
+
+font-family: 'montlight';
+   
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

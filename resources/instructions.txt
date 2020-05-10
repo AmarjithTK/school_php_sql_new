@@ -1,0 +1,40 @@
+Configuring PHP and MYSQL for making result_table work
+
+
+
+Install mysql php xampp or lamp packages
+
+configure server = 'localhost' and user = 'root' and password null using xampp php control panel
+
+create a database called school either using the webpage login section or through command line;
+
+
+
+create a table s2 using command
+
+'create table s2 (regno int primary key,name varchar(20),english int,maths int,physics int,chemistry int,computer int,sl int);'
+
+
+
+** (you can use s1,a1,a2,b1,b2,c1,c2,h1,h2 if you want)
+
+
+
+input some values to the table using insert into command 
+
+copy this php folder to computer/opt/lampp/htdocs or the respective folder to which the apache server has been installed
+
+
+
+
+
+************************************************************************************************
+
+for login.php  username is amarjith and  password is spacex
+
+
+open index.html file
+
+
+
+

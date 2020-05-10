@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+        <div class="page">
+            <div class="top">
+                <a href="index.html">back</a>
+                <h1>results of first terminal exam</h1>
+             
+      
+            </div>
+            <div class="bottom">
+
+                <form action="http://localhost/php/results_all.php" method="post">
+
+
+                    <input type="text" name="rollno" id="" placeholder="Rollno">
+                    <input type="text" name="class" id="" placeholder="class">
+                    <input type="submit" value="Show results">
+
+
+                </form>
+
+
+
+            </div>
+
+        </div>
+
+
+        <script>
+
+
+
+            var inputfield = Array.from(document.querySelectorAll('input[type="text"]'))
+            var select = document.querySelector('select')
+    
+            console.log(inputfield,select)
+    
+            var form = document.querySelector('form')
+    
+            form.addEventListener('keypress', (e) => {
+                if (e.which == 13)
+                    e.preventDefault()
+    
+    
+            })
+    
+    
+            const callback = (input) => {
+                console.log(input.target);
+    
+    
+                if (input.which == 13 || input.target==select) {
+                    const abc = input.target
+                    abc.nextElementSibling.focus();
+    
+                    //    input.target.nextSibling.focus()
+                }
+            }
+    
+    
+    
+    
+            inputfield.forEach(inputs => {
+                inputs.addEventListener('keyup', (input) => callback(input))
+            })
+    
+    
+            select.addEventListener('change',(e)=>{
+                console.log(e);
+                
+                callback(e)
+            })
+    
+            console.log(inputfield);
+    
+    
+    
+    
+        </script>
+
+
+    <style>
+
+        
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+    
+    *{
+        font-family: 'Montserrat', sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 400;
+    }
+
+
+    .top{
+        width: 100vw;
+        height:30vh;
+        background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        display: flex;
+       
+        color: rgb(255, 255, 255);
+        align-items: center;
+    }
+
+
+    .top h1{
+        margin: 0 auto;
+
+    }
+
+    .top a{
+        margin-left:100px;
+    }
+
+    .bottom{
+
+        width: 100vw;
+        height:70vh;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        color: rgb(0, 0, 0);
+        align-items: center;
+    }
+
+
+    a{
+color: black;
+        background-color: rgb(216, 214, 214);
+        padding: 10px 30px;
+        border-radius: 3px;
+       
+        margin-right: 5px;
+    }
+
+
+    input{
+
+border: none;
+
+}
+
+
+input[type='text'],  input[type='password']{
+width: 100%;
+padding: 12px 20px;
+margin:20px 0;
+border-radius: 3px;
+background-color: rgba(214, 214, 214, 0.877);
+
+}
+
+
+input[type='submit']{
+color: rgb(255, 255, 255);
+    background-color: #c471ed;
+    padding: 12px 20px;
+    border-radius: 3px;
+    margin-right: 5px;
+    outline: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+    
+    
+    </style>
+
+</body>
+</html>

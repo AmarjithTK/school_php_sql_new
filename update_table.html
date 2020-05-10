@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="page">
+        <div class="top">
+            <a href="index.html">back</a>
+            <h1>Adding student data</h1>
+
+
+        </div>
+        <div class="bottom">
+
+            <form action="http://localhost/php/update.php" method="post" class="form1">
+
+                <select name="classname" id="" onchange="callback(select)">
+
+                    <option value="s1">s1</option>
+                    <option selected value="s2">s2</option>
+                    <option value="a1">a1</option>
+                    <option value="a2">a2</option>
+                    <option value="b1">b1</option>
+                    <option value="b2">b2</option>
+                    <option value="c1">c1</option>
+                    <option value="c2">c2</option>
+                    <option value="h1">h1</option>
+                    <option value="h2">h2</option>
+                </select>
+
+                <input type="text" name="rollno" id="" placeholder="Rollno">
+                <input type="text" name="name" id="" placeholder="name">
+                <input type="text" name="eng" id="" placeholder="english">
+                <input type="text" name="mal" id="" placeholder="Second language">
+                <input type="text" name="maths" id="" placeholder="mathematics">
+                <input type="text" name="phy" id="" placeholder="physics">
+                <input type="text" name="che" id="" placeholder="chemistry">
+                <input type="text" name="cs" id="" placeholder="computer science">
+
+
+
+
+
+
+                <input type="submit" value="Add data">
+
+
+            </form>
+
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+
+
+        var inputfield = Array.from(document.querySelectorAll('input[type="text"]'))
+        var select = document.querySelector('select')
+
+        console.log(inputfield,select)
+
+        var form = document.querySelector('form')
+
+        form.addEventListener('keypress', (e) => {
+            if (e.which == 13)
+                e.preventDefault()
+
+
+        })
+
+
+        const callback = (input) => {
+            console.log(input.target);
+
+
+            if (input.which == 13 || input.target==select) {
+                const abc = input.target
+                abc.nextElementSibling.focus();
+
+                //    input.target.nextSibling.focus()
+            }
+        }
+
+
+
+
+        inputfield.forEach(inputs => {
+            inputs.addEventListener('keyup', (input) => callback(input))
+        })
+
+
+        select.addEventListener('change',(e)=>{
+            console.log(e);
+            
+            callback(e)
+        })
+
+        console.log(inputfield);
+
+
+
+
+    </script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap');
+
+        * {
+
+
+
+
+            font-family: 'Poppins', sans-serif;
+
+
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-transform: uppercase;
+            text-decoration: none;
+
+        }
+
+        a {
+            color: black;
+            background-color: rgb(202, 199, 199);
+            padding: 10px 30px;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+
+        .top a {
+            margin-left: 50px;
+            background-color: rgb(226, 221, 221);
+        }
+
+
+        .top {
+            width: 100%;
+            height: 30vh;
+            background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            display: flex;
+
+            color: rgb(255, 255, 255);
+            align-items: center;
+        }
+
+        H1 {
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .bottom {
+
+            width: 100%;
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+
+        }
+
+        form {
+            width: 60%;
+        }
+
+
+
+
+
+        input {
+
+            border: none;
+
+        }
+
+
+
+
+        input[type='text'],
+        input[type='password'],
+        select {
+            width: 100%;
+
+            padding: 12px 20px;
+            margin: 20px 0;
+            border-radius: 3px;
+            background-color: rgba(214, 214, 214, 0.877);
+            border: 0;
+
+        }
+
+
+
+
+        input[type='submit'] {
+            color: rgb(255, 255, 255);
+            background-color: #c471ed;
+            padding: 12px 20px;
+            border-radius: 3px;
+            margin-right: 5px;
+            outline: none;
+            width: 100%;
+            margin: 10px 0;
+        }
+    </style>
+
+</body>
+
+</html>
